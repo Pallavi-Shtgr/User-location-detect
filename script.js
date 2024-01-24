@@ -22,4 +22,5 @@ function onError(error) {
     } else {
         button.innerText = "Something went wrong";
     }
+    button.setAttribute("disabled","true");
 }
