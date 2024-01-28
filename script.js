@@ -13,7 +13,13 @@ function onSuccess(position){
     // console.log(position)
     let{latitude, longitude} = position.coords;
      fetch('https://api.opencagedata.com/geocode/v1/json?q=$latitude}+${longitude}&key=${apiKey}')
-     .then(response => console.log)
+     .then(response => response.json()).then(result => {
+
+        let allDetails = result.results[0].components;
+        let {country, postcode , country} = allDetails;
+        button.innerText='${country}';
+
+     })
 }
 
 function onError(error) {
