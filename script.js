@@ -10,7 +10,9 @@ button.addEventListener("click", ()=> {
 })
 
 function onSuccess(position){
-    console.log(position)
+    // console.log(position)
+    let{latitude, longitude} = position.coords;
+    console.log(latitude,logitude)
 }
 
 function onError(error) {
